@@ -9,9 +9,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="pixel-drop">
-        <meta name="description" content="Turmet - Travel & Tour Agency HTML Template">
+        <meta name="description" content="Travel Solution">
         <!-- ======== Page title ============ -->
-        <title>Turmet - Travel & Tour Agency HTML Template</title>
+        <title>Travel Solution</title>
         <!--<< Favcion >>-->
         <link rel="shortcut icon" href="assets/img/favicon.svg">
         <!--<< Bootstrap min.css >>-->
@@ -42,7 +42,7 @@
             <div class="animation-preloader">
                 <div class="spinner">                
                 </div>
-                <div class="txt-loading">
+                <!--<div class="txt-loading">
                     <span data-text-preloader="T" class="letters-loading">
                         T
                     </span>
@@ -61,7 +61,7 @@
                     <span data-text-preloader="T" class="letters-loading">
                         T
                     </span>
-                </div>
+                </div>-->
                 <p class="text-center">Loading</p>
             </div>
             <div class="loader">
@@ -171,10 +171,10 @@
                     <div class="header-main">
                         <div class="logo">
                             <a href="index.html" class="header-logo">
-                                <img src="assets/img/logo/black-logo.svg" alt="logo-img">
+                                <img src="assets/img/travel_solution-logo/55555.png"style="width: 100px; height: auto;" alt="logo-img">
                             </a>
                             <a href="index.html" class="header-logo-2">
-                                <img src="assets/img/logo/white-logo.svg" alt="logo-img">
+                                <img src="assets/img/travel_solution-logo/66666.png"style="width: 140px; height: 100;" alt="logo-img">
                             </a>
                         </div>
                         <div class="mean__menu-wrapper">
@@ -308,18 +308,19 @@
                                                 <li><a href="news-details.html">Blog Details</a></li>
                                             </ul>
                                         </li>-->
+                                          <li>
+                                            <a href="taxi.html">Local taxi</a>
+                                        </li>
                                         <li>
                                             <a href="contact.html">Contact Us</a>
                                         </li>
-                                        <li>
-                                            <a href="taxi.html">Local taxi</a>
-                                        </li>
+                                      
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                         <div class="header-right d-flex justify-content-end align-items-center">
-                            <a href="#0" class="search-trigger search-icon"><i class="fa-regular fa-magnifying-glass"></i></a>
+                            <!--<a href="#0" class="search-trigger search-icon"><i class="fa-regular fa-magnifying-glass"></i></a>-->
                             <a href="contact.html" class="theme-btn"> Request A Quote <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
                             <div class="header__hamburger d-xl-none my-auto">
                                 <div class="sidebar__toggle">
@@ -332,7 +333,7 @@
             </div>
         </header>
 
-        <!-- Search Area Start -->
+        <!-- Search Area Start 
         <div class="search-wrap">
             <div class="search-inner">
                 <i class="fas fa-times search-close" id="search-close"></i>
@@ -344,7 +345,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div>-->
         
         <!-- breadcrumb-wrappe-Section Start -->
         <section class="breadcrumb-wrapper fix bg-cover" style="background-image: url(assets/img/breadcrumb/breadcrumb.jpg);">
@@ -393,7 +394,7 @@
                                 </div>
                                 <div class="content">
                                     <h3>
-                                        <a href="mailto:info@tripco.com">info@tripco.com</a>
+                                        <a href="mailto: travelsolution2621@gmail.com"> travelsolution2621@gmail.com </a>
                                     </h3>
                                     <p>
                                         Email us anytime for anykind <br> ofquety.
@@ -410,7 +411,7 @@
                                 </div>
                                 <div class="content">
                                     <h3>
-                                        <a href="tel:Hot+208-666-0112">Hot:+208-666-0112</a>
+                                        <a href="tel:9457938908">Call :+919457938908</a>
                                     </h3>
                                     <p>
                                         Call us any kind suppor,we will wait for it.
@@ -449,8 +450,8 @@
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="form-clt">
-                                                    <input type="text" name="email" id="email4" placeholder="Your Email">
-                                                </div>
+                                                 <input type="text" name="email" id="email4" placeholder="Your Email"oninput="this.value = this.value.replace(/[^a-zA-Z0-9]/g, '')">
+                                                    </div>
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="form-clt">
@@ -500,7 +501,7 @@
                             <div class="single-widget-items text-center">
                                 <div class="widget-head">
                                     <a href="index.html">
-                                        <img src="assets/img/logo/white-log.svg" alt="img">
+                                <img src="assets/img/travel_solution-logo/66666.png"style="width: 400px; height:auto; max-height: 180px;" alt="logo-img">
                                     </a>
                                 </div>
                                 <div class="footer-content">
@@ -650,7 +651,8 @@
                 </div>
             </div>
         </footer>
-<a href="#" target="_blank" 
+<a href="https://wa.me/9457938908" target="_blank" 
+
    style="position: fixed; 
           bottom: 80px; 
           right: 30px; 
@@ -687,12 +689,32 @@
         <script src="assets/js/ajax-mail.js"></script>
         <!--<< Main.js >>-->
         <script src="assets/js/main.js"></script>
-       <script>
+<script>
     const form = document.getElementById('contact-form');
     const successMessage = document.getElementById('success-message');
+    const submitBtn = form.querySelector('button[type="submit"]');
 
     form.addEventListener('submit', async function (e) {
         e.preventDefault(); // Form submit roko
+
+        // ✅ Check if any input is empty
+        const inputs = form.querySelectorAll('input, textarea');
+        let emptyFound = false;
+
+        inputs.forEach(input => {
+            if (!input.value.trim()) {
+                emptyFound = true;
+            }
+        });
+
+        if (emptyFound) {
+            alert("Please fill out all fields.");
+            return; // Stop form submission
+        }
+
+        // ✅ Disable submit button
+        submitBtn.disabled = true;
+        submitBtn.innerText = "Submitting...";
 
         const formData = new FormData(form);
 
@@ -706,16 +728,19 @@
 
         if (response.ok) {
             form.reset();
-            successMessage.style.display = 'block'; // Show message
+            successMessage.style.display = 'block';
 
-            // ⏱ 3 seconds ke baad message hide kar do
+            // ⏱ 3 seconds ke baad message hide karo
             setTimeout(() => {
                 successMessage.style.display = 'none';
-            }, 3000); // 3000 ms = 3 sec
-
+            }, 3000);
         } else {
             alert("Something went wrong. Please try again.");
         }
+
+        // ✅ Enable button back
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Submit";
     });
 </script>
 
